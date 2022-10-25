@@ -1,0 +1,41 @@
+<ion-header>
+
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <form [formGroup]="formularioLogin">
+
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">Correo:</ion-label>
+            <ion-input formControlName="correo" type="email" placeholder="Email"
+              pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"></ion-input>
+          </ion-item>
+        </ion-col>
+
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">Contraseña:</ion-label>
+            <ion-input formControlName="contraseña" type="password" placeholder="Ingrese contraseña"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </form>
+
+
+    <ion-button (click)="Ingresar()" [disabled]="formularioLogin.invalid" type="submit" expand="block">INICIAR SESÍON
+    </ion-button>
+
+    <a id="informacion" routerLink="/conocenos">CONÓCENOS</a>
+
+    <a id="link1" routerLink="/registrar">Registrarse</a>
+
+  </ion-card>
+
+
+</ion-content>

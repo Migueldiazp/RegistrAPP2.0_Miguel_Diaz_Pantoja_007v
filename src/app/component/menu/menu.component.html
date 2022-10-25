@@ -1,0 +1,28 @@
+<ion-menu side="start" menuId="first" contentId="alumno" swipe-gesture="false">
+
+  <ion-header>
+    <ion-toolbar color="black">
+      <ion-title>Menu RegistrAPP</ion-title>
+
+
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-menu-toggle [autoHide]="true">
+        <ion-item [routerLink]="['captura']">
+          Registrar Asistencia <ion-icon name="camera-outline"></ion-icon>
+        </ion-item>
+      </ion-menu-toggle>
+
+      <ion-item> Mi Asistencia</ion-item>
+      <ion-menu-toggle [autoHide]="true">
+      <ion-item [routerLink]="['perfil']"> Mis datos</ion-item>
+    </ion-menu-toggle>
+      <ion-menu-toggle [autoHide]="true">
+        <ion-button position="floating" (click)="cerrarSesion()" color="warning-contrast">Cerrar sesión </ion-button>
+      </ion-menu-toggle>
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
